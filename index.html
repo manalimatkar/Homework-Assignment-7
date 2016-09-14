@@ -9,11 +9,17 @@
   <link rel="stylesheet" type="text/css" href="https://bootswatch.com/united/bootstrap.min.css">
   <!-- Override Style -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
   <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  <!-- Moment.js Reference -->
+  <!-- <script src="http://momentjs.com/downloads/moment.js"></script> -->  
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
 
@@ -45,28 +51,8 @@
                     <th>Minutes Away</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
+                <tbody id="trainList">
+                  
                 </tbody>
               </table> 
 
@@ -92,7 +78,7 @@
             </div>
             <div class="form-group">
               <label for="trainDestination">Destination</label>
-              <input type="number" class="form-control" id="trainDestination">
+              <input type="text" class="form-control" id="trainDestination">
             </div> 
              <div class="form-group form-inline">
               <label for="trainTime">First Train Time (Format HH:MM millitary time)</label>
@@ -103,7 +89,7 @@
               <label for="trainFrequency">Frequency</label>
               <input type="number" class="form-control" id="trainFrequency">
             </div>
-            <button id="submitBid" type="submit" class="btn btn-primary">Submit</button>
+            <button id="addTrain" type="submit" class="btn btn-primary">Submit</button>
           </form>
 
         </div>
@@ -115,7 +101,7 @@
 </div>
   
   <!-- Javascript -->
-  <script src="trainschedule.js"></script>
+  <script src="assets/js/trainschedule.js"></script>
 
 </body>
 </html>
